@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Edit</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Styles.css}"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <h1>Edit user</h1>
+    <form method="Post" th:action="@{/home/edit/}">
+
+        <p>Enter email</p>
+        <input type="text" th:field="${user.email}"/>
+        <p>Enter firstname</p>
+        <input type="text" th:field="${user.firstname}"/>
+        <p>Enter lastname</p>
+        <input type="text" th:field="${user.lastname}"/>
+
+        <input th:href="${'/home/home'}" class="btn btn-primary" type="submit" value="Send"/>
+    </form>
+</div>
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+</html>
